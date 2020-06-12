@@ -54,6 +54,10 @@ a {
 .nav_bar_left li:hover,.nav_bar_right li:hover{
     text-decoration: underline;
 }
+
+.active{
+    font-weight: bold;
+}
 /*header end*/
 
 /*main start*/
@@ -173,6 +177,8 @@ aside h2{
 /*footer starttt*/
 
 footer{
+    bottom: 0;
+    width: 100%;
     padding-top: 10px;
     height: 300px;
     background-color: #F3E9F1;
@@ -205,3 +211,82 @@ footer div{
 }
 
 /*footer enddddddd*/
+
+/*pannier starttttttttt*/
+
+.articles{
+    width: 70%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+table{
+    width: 100%;
+    margin: auto;
+}
+
+td{
+    border: 1px solid black;
+
+}
+
+td img{
+    width: 200px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+button{
+    font-size: 1.2em;
+    margin: 30px;
+    color: white;
+}
+
+.back{
+    border: none;
+    box-shadow: grey 1px 1px 10px;
+    border-radius: 10px;
+    padding: 10px 20px 10px 20px;
+    background: #007bff;
+}
+
+.check{
+    border: none;
+    box-shadow: grey 1px 1px 10px;
+    border-radius: 10px;
+    padding: 10px 20px 10px 20px;
+    background: #28a745;
+}
+
+
+/*pannier endddddddd*/
+
+/*formulaire start */
+
+form{
+    background: #F3E9F1;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px lightgrey;
+    width: 70%;
+    margin: auto;
+}
+
+form > div{
+    margin: 20px;
+    display: flex;
+}
+
+form > label{
+    margin-right: 5px;
+}
+
+.names, .ville_cp{
+    justify-content: space-between;
+}
+
+
+/*formulaire endd*/
