@@ -225,13 +225,33 @@ table{
     margin: auto;
 }
 
-td{
-    border: 1px solid black;
+tbody{
+    width: 100%;
+}
 
+tr{
+    border-bottom: grey 1px;
+}
+
+.ligne{
+    margin-bottom:  50px;
+    justify-content: center;
+    border-bottom: grey 1px solid;
 }
 
 td img{
     width: 200px;
+}
+
+.delete_bloc{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.delete_button{
+
+    color: red;
 }
 
 .buttons{
@@ -253,12 +273,31 @@ button{
     background: #007bff;
 }
 
+.back:active{
+    background-color: #6aaffa;
+}
+
 .check{
     border: none;
     box-shadow: grey 1px 1px 10px;
     border-radius: 10px;
     padding: 10px 20px 10px 20px;
     background: #28a745;
+}
+
+.check:active{
+    background-color: #66af77;
+}
+
+.total{
+    display: flex;
+    position: relative;
+    width: 250px;
+    border-radius: 10px;
+    padding: 10px;
+    align-items: baseline;
+    font-size: 1.4em;
+    background: #F3E9F1;
 }
 
 
@@ -271,22 +310,27 @@ form{
     padding: 30px;
     border-radius: 20px;
     box-shadow: 0px 0px 20px lightgrey;
-    width: 70%;
+    width: 60%;
     margin: auto;
+    padding-left: 20%;
 }
 
-form > div{
-    margin: 20px;
-    display: flex;
+input{
+    height: 30px;
+    width: 60%;
 }
 
-form > label{
-    margin-right: 5px;
+form >fieldset{
+    margin: 10px auto 0px auto;
+    align-items: center;
 }
 
-.names, .ville_cp{
-    justify-content: space-between;
+fieldset{
+    border: medium none;
+    margin: 0 0 10px;
+    min-width: 100%;
+    padding: 0;
+    width: 100%;
 }
-
 
 /*formulaire endd*/

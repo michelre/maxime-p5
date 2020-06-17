@@ -13,7 +13,7 @@
         <nav>
             <ul class="nav_bar_left">
                 <li><a href="peluches.html">Peluches</a></li>
-                <li><a href="index.html" class="active">Accueil</a></li>
+                <li><a href="index.html">Accueil</a></li>
             </ul>
         </nav>
         <div class="main_logo">
@@ -22,18 +22,41 @@
         <nav>
             <ul class="nav_bar_right">
                 <li><a href="">Contact</a></li>
-                <li><a href="pannier.html">Mon pannier</a></li>
+                <li><a href="pannier.html" class="active">Mon pannier</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="banniere">
-            <img src="../images/banniere-teddy.jpg" alt="plusieures peluches" class="banniere_img">
-            <div class="banniere_text">
-                <h1>Découvrez nos différentes peluches !</h1>
-                <p>Trouvez votre bonnheur et celui de votre enfant parmis toutes nos gammes de peluches. Découvrez un monde de douceur parmis nos choix de couleurs. </p>
-            </div>
+    <main class="pannier_page">
+        <div class="formulaire">
+            <form>
+                <h2>Finalisez votre commande:</h2>
+                <fieldset>
+                    <input placeholder="Nom" type="text" tabindex="1" required autofocus>
+                </fieldset>
+                <fieldset>
+                    <input placeholder="Prénom" type="text" tabindex="2" required>
+                </fieldset>
+                <fieldset>
+                    <input placeholder="Adresse postale" type="text" tabindex="3" required>
+                </fieldset>
+                <fieldset>
+                    <input placeholder="Ville" type="text" tabindex="4" required>
+                </fieldset>
+                <fieldset>
+                    <input placeholder="Code postal" type="text" tabindex="5" required>
+                </fieldset>
+                <fieldset>
+                    <input placeholder="Adresse mail" type="email" tabindex="6" required>
+                </fieldset>
+                <fieldset>
+                    <input placeholder="Téléphone" type="tel" tabindex="6" required>
+                </fieldset>
+                <button class="check" name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+    </fieldset>
+            </form>
         </div>
+    </main>
 
     <footer>
         <div class="footer_main_section">
@@ -69,5 +92,9 @@
             Copyright © 2020 Orinoco. All Rights Reserved
         </p>
     </footer>
+
+
+<script src="../js/ajax.js"></script>
+<script src="js/index.js"></script>
 </body>
 </html>
