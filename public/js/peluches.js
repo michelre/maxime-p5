@@ -11,7 +11,7 @@ function displayTeddies(teddiesData){
 }
 
 ajax
-    .get('http://localhost:3000/api/teddies')
+    .get('https://oc-p5-api.herokuapp.com/api/teddies')
     .then((data) => {
         displayTeddies(data)
     }, () => {

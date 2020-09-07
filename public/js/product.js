@@ -18,7 +18,7 @@ function displayTeddieDetails(teddieData){
         <aside>
             <h2>${teddieData.name}</h2>
             <div class="product_description">
-                <p>${teddieData.price}€</p>
+                <p>${teddieData.price/100}€</p>
             </div>
             <div class="product_option">
                 <select>
@@ -29,7 +29,7 @@ function displayTeddieDetails(teddieData){
 }
 
 ajax
-    .get(`http://localhost:3000/api/teddies/${productId}`)
+    .get(`https://oc-p5-api.herokuapp.com/api/teddies/${productId}`)
     .then((teddieData) => {
         displayTeddieDetails(teddieData)
     })
