@@ -25,7 +25,11 @@ function displayTeddieDetails(teddieData){
                     ${teddieData.colors.map((color) => `<option value="${color}">${color}</option>`)}
                 </select>
             </div>
+            <div class="basket_add_section">
+                <button type="button" class="basket_add_button" onClick="basketAdd">Ajouter au pannier</button>
+            </div>
         </aside>`
+        
 }
 
 ajax
@@ -33,3 +37,9 @@ ajax
     .then((teddieData) => {
         displayTeddieDetails(teddieData)
     })
+
+    
+
+
+
+        

@@ -21,7 +21,7 @@ class Ajax {
     }
 
     post(){
-        //TODO: Validation de la commande
+        //TO DO: Validation de la commande
     }
 
 
