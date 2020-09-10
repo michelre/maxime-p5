@@ -29,10 +29,14 @@
 
     <main class="pannier_page">
         <div class="articles">
-            <h1>Votre pannier</h1>
+            <h1 class="basket_head_button">Votre pannier</h1>
             <table>
-                <thead>Récapitulatif:</thead>
                 <tbody>
+                    <tr class="ligne basket_titles">
+                        <td>Article</td>
+                        <td><p>Image</p></td>
+                        <td class="delete_bloc"><p>Quantité</p></td>
+                    </tr>
                     <tr class="ligne">
                         <td>L'ourson mignon</td>
                         <td><img src="../images/teddy_1.jpg" alt=""></td>
@@ -98,7 +102,7 @@
     </footer>
 
 
-<script src="../js/ajax.js"></script>
-<script src="js/index.js"></script>
+    <script src="./js/ajax.js"></script>
+    <script src="./js/product.js"></script>
 </body>
 </html>

@@ -7,7 +7,7 @@ const productId = params.get('productId')
 function displayTeddieDetails(teddieData){
     const mainProduct = document.querySelector('.main_product')
     mainProduct.innerHTML = `<div class="product_section">
-            <h1 class="product_title">${teddieData.name}</h1>
+            <h1 id="product_title">${teddieData.name}</h1>
             <div class="image_section">
                 <img src="${teddieData.imageUrl}" alt="ourson en peluche">
             </div>
@@ -26,10 +26,17 @@ function displayTeddieDetails(teddieData){
                 </select>
             </div>
             <div class="basket_add_section">
-                <button type="button" class="basket_add_button" onClick="basketAdd">Ajouter au pannier</button>
+                <button type="button" id="basket_add_button">Ajouter au pannier</button>
             </div>
         </aside>`
         
+        var basketAdd = document.getElementById('basket_add_button');
+        var counter = localStorage.getItem('counter');
+        
+        basketAdd.onclick = function() {
+            localStorage.setItem(teddieData.name+counter++, productId);
+        }
+        console.log(basketAdd);
 }
 
 ajax
@@ -39,6 +46,7 @@ ajax
     })
 
     
+
 
 
 

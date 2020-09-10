@@ -104,6 +104,8 @@ main{
     background-color: #8F5BFE;
     padding: 15px;
     color: white;
+    position: relative;
+    text-align: center;
 }
 
 /*banniere end*/
@@ -167,7 +169,7 @@ aside{
     background: white;
     height: 600px;
     width: 300px;
-    background: rgb(250, 240, 248);
+    background: rgb(240, 240, 240);
     padding: 25px;
     margin-top: 100px;
     box-shadow: 0px 0px 20px lightgray;
@@ -177,7 +179,7 @@ aside h2{
     text-decoration: underline;
 }
 
-.basket_add_button{
+#basket_add_button{
     background-color: #8F5BFE;
     border: none;
     color: white;
@@ -192,11 +194,11 @@ aside h2{
     margin-bottom: 100px;
 }
 
-.basket_add_button:hover{
+#basket_add_button:hover{
     background-color: #a47aff;
 }
 
-.basket_add_button:active{
+#basket_add_button:active{
     background-color: #8F5BFE;
 }
 
@@ -241,6 +243,15 @@ footer div{
 /*footer enddddddd*/
 
 /*pannier starttttttttt*/
+
+.basket_titles{
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.basket_titles>td{
+    text-align: center;
+}
 
 .articles{
     width: 70%;
