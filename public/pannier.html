@@ -30,34 +30,20 @@
     <main class="pannier_page">
         <div class="articles">
             <h1 class="basket_head_button">Votre panier</h1>
-            <table>
-                <tbody>
-                    <tr class="ligne basket_titles">
-                        <td>Article</td>
-                        <td><p>Image</p></td>
-                        <td class="delete_bloc"><p>Quantité</p></td>
-                    </tr>
-                    <tr class="ligne">
-                        <td>L'ourson mignon</td>
-                        <td><img src="../images/teddy_1.jpg" alt=""></td>
-                        <td class="delete_bloc"><ol>2</ol><button class="delete_button">supprimer</button></td>
-                    </tr>
-                    <tr class="ligne">
-                        <td>L'ourson calin</td>
-                        <td><img src="../images/teddy_2.jpg" alt=""></td>
-                        <td class="delete_bloc"><ol>1</ol><button class="delete_button">supprimer</button></td> 
-                    </tr>
-                    <tr>
-                        <td>L'ourson amoureux</td>
-                        <td><img src="../images/teddy_3.jpg" alt=""></td>
-                        <td class="delete_bloc"><ol>3</ol><button class="delete_button">supprimer</button></td>
-                    </tr>
+            <table id="basket_content">
+                <thead class="ligne basket_titles">
+                    <th>Produit</th>
+                    <th>Image</th>
+                    <th>Couleur</th>
+                    <th>Quantité</th>
+                    <th>Supprimer</th>
+                    <th>Prix</th>
+                    <th>Total</th>
+                </thead>
+                <tbody id="tbody">
+                    
                 </tbody>
             </table>
-            <div class="total">
-                <h3>Total:</h3>
-                <ol>120€</ol>
-            </div>
             <div class="buttons">
             <button class="back">Continer mes achats</button>
             <a href="commande.html"><button class="check" >valider ma commande</button></a>
@@ -103,7 +89,6 @@
 
 
     <script src="./js/ajax.js"></script>
-    <script src="./js/product.js"></script>
     <script src="./js/basket.js"></script>
 </body>
 </html>

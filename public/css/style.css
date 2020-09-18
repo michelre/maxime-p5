@@ -249,8 +249,10 @@ footer div{
     font-size: 1.2em;
 }
 
-.basket_titles>td{
+thead>th{
     text-align: center;
+    justify-content: space-evenly;
+    color: red;
 }
 
 .articles{
