@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="../images/favicon.ico" />
+    <title>Orinoco peluches</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="nav_bar_left">
+                <li><a href="peluches.html">Peluches</a></li>
+                <li><a href="index.html">Accueil</a></li>
+            </ul>
+        </nav>
+        <div class="main_logo">
+            <a href="index.html"><img src="../images/orinoco-logo-trans.png" alt="logo"></a>
+        </div>
+        <nav>
+            <ul class="nav_bar_right">
+                <li><a href="">Contact</a></li>
+                <li><a class="active basket_head_button" href="pannier.html" class="active">Mon panier</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="pannier_page">
+        <div class="articles">
+            <h1 class="basket_head_button">Votre panier</h1>
+            <table id="basket_content">
+                <thead class="ligne basket_titles">
+                    <th>Produit</th>
+                    <th>Image</th>
+                    <th>Couleur</th>
+                    <th>Quantité</th>
+                    <th>Supprimer</th>
+                    <th>Prix</th>
+                    <th>Total</th>
+                </thead>
+                <tbody id="tbody">
+
+                </tbody>
+            </table>
+            <div class="buttons">
+                <a href="peluches.html"><button class="back">Continer mes achats</button></a>
+                <a><button class="check" onclick="displayForm()">valider ma commande</button></a>
+            </div>
+        </div>
+        <!-- Formualaire -->
+        <div class="formulaire">
+            <form id="checkout">
+                <h2 class="basket_head_button">Finalisez votre commande:</h2>
+                <fieldset>
+                    <input name="lastName" placeholder="Nom" type="text" tabindex="1" pattern="[A-Za-z]{1,15}" required
+                        autofocus>
+                </fieldset>
+                <fieldset>
+                    <input name="firstName" placeholder="Prénom" type="text" tabindex="2" pattern="[A-Za-z]{1,15}"
+                        required>
+                </fieldset>
+                <fieldset>
+                    <input name="address" placeholder="Adresse postale" type="text" tabindex="3" required>
+                </fieldset>
+                <fieldset>
+                    <input name="city" placeholder="Ville" type="text" tabindex="4" pattern="[A-Za-z]{1,15}" required>
+                </fieldset>
+                <fieldset>
+                    <input name="email" placeholder="Adresse mail" type="email" tabindex="6" required>
+                </fieldset>
+                <button id="back" onclick="history.go(-1)">Retour</button>
+                <button type="submit" id="contact-submit"
+                    data-submit="...Sending">Submit</button>
+            </form>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer_main_section">
+            <div>
+                <h3>Suivez-nous:</h3>
+                <ul>
+                    <li><a href="index.html">Contactez-nous</a></li>
+                    <li><a href="index.html">Rejoignez-nous</a></li>
+                    <li><a href="index.html">Notre entreprise</a></li>
+                    <li><a href="index.html">Mentions légales</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Suivez-nous:</h3>
+                <ul>
+                    <li><a href="index.html">Oribook</a></li>
+                    <li><a href="index.html">Oritextil</a></li>
+                    <li><a href="index.html">Oritech</a></li>
+                    <li><a href="index.html">Orifood</a></li>
+                </ul>
+            </div>
+            <div class="social">
+                <h3>Suivez-nous:</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Instagram</li>
+                    <li>Twitter</li>
+                    <li>LinkedIn</li>
+                </ul>
+            </div>
+        </div>
+        <p class="bottom_footer">
+            Copyright © 2020 Orinoco. All Rights Reserved
+        </p>
+    </footer>
+
+
+    <script src="./js/ajax.js"></script>
+    <script src="./js/basket.js"></script>
+</body>
+
+</html>
