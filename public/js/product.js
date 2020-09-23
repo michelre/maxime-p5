@@ -4,7 +4,7 @@ const ajax = new Ajax();
 const params = new URLSearchParams(document.location.search.substring(1))
 const productId = params.get('productId')
 
-    //HTML SECTION
+//HTML SECTION
 function displayTeddieDetails(teddieData) {
     const mainProduct = document.querySelector('.main_product')
     mainProduct.innerHTML = `<div class="product_section">
@@ -45,7 +45,7 @@ function displayTeddieDetails(teddieData) {
 
 
     //ADD TO CART SECTION
-   
+
 
     const basketAdd = document.getElementById('basket_add_button');
 
@@ -69,7 +69,7 @@ function displayTeddieDetails(teddieData) {
         }
 
         localStorage.setItem('cart', JSON.stringify(cart));
-        
+
         console.log(basketAdd);
         console.log(cart);
 

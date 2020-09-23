@@ -19,6 +19,7 @@ function removeItem(key) {
             // On supprime visuellement la ligne du tableau
             const line = document.querySelector(`[data-key="${key}"]`)
             line.remove()
+            //Recalcul du total du pannier
             document.querySelector(`#total`).innerHTML = getTotalCart();
         }
     }
@@ -91,6 +92,43 @@ if (keys.length === 0) {
         <td id="total-line" colspan="6">Total</td>
         <td id="total">${getTotalCart()}</td>
     </tr>`
+
+    for (let i = 0; i < keys.length; i++) {
+        document.querySelector(`[data-key="${keys[i]}"] .remove`).addEventListener('click', () => removeItem(keys[i]));
+    }
+}
+//Formulaire
+function displayForm() {
+    document.querySelector(".formulaire").style.display = "block";
 }
 
-console.log();
+const checkoutButton = document.querySelector('#checkout')
+
+checkoutButton.addEventListener('submit', (e) => {
+    const totalToPay = getTotalCart()
+    console.log(totalToPay);
+    const productsOrdered = cart[key]
+    const orderTeddies = {
+        products: [],
+        contact: {
+            firstName: e.target.firstName.value,
+            lastName: e.target.lastName.value,
+            address: e.target.address.value,
+            city: e.target.city.value,
+            email: e.target.email.value,
+        }
+    }
+
+    let products = orderTeddies.products
+    for (let i = 0; i < keys.length; i++) {
+        const key = keys[i]
+        const product = cart[key]
+        const productsOrdered = product._id
+        products.push(productsOrdered)
+    }
+    postOrder(orderTeddies)
+        .then((resp) => {
+            localStorage.removeItem('cart');
+            window.location.href = `commande.html?orderId=${resp.orderId}&firstName=${resp.contact.firstName}&lastName=${resp.contact.lastName}&totalToPay=${totalToPay}`
+        })
+});
