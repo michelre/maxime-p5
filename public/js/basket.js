@@ -105,9 +105,8 @@ function displayForm() {
 const checkoutButton = document.querySelector('#checkout')
 
 checkoutButton.addEventListener('submit', (e) => {
+    e.preventDefault()
     const totalToPay = getTotalCart()
-    console.log(totalToPay);
-    const productsOrdered = cart[key]
     const orderTeddies = {
         products: [],
         contact: {
@@ -126,7 +125,8 @@ checkoutButton.addEventListener('submit', (e) => {
         const productsOrdered = product._id
         products.push(productsOrdered)
     }
-    postOrder(orderTeddies)
+    const ajax = new Ajax()
+    ajax.postOrder(orderTeddies)
         .then((resp) => {
             localStorage.removeItem('cart');
             window.location.href = `commande.html?orderId=${resp.orderId}&firstName=${resp.contact.firstName}&lastName=${resp.contact.lastName}&totalToPay=${totalToPay}`
